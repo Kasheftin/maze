@@ -5,7 +5,6 @@ window.MAZE_GENERATOR = function(options) {
 	this.options = $.extend(true,defaults,options);
 	this.options.width = parseInt(this.options.width);
 	this.options.height = parseInt(this.options.height);
-	this.options.sq = parseInt(this.options.sqSize);
 	this.initialize();
 }
 
