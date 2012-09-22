@@ -7,12 +7,8 @@ $(document).ready(function() {
 			opts[v.name] = v.value;
 		});
 		var mg = new MAZE_GENERATOR(opts);
-//		console.time("generate");
 		mg.generate();
-//		console.timeEnd("generate");
-//		console.time("draw");
-		mg.renderText();
-//		console.timeEnd("draw");
+		mg.render();
 		return false;
 	});
 });

@@ -52,15 +52,16 @@ MAZE_GENERATOR.prototype = {
 			if (cnt <= 1) this.genReq(nh,nw,level+1);
 		}
 	},
-	render: function() {
+	renderDiv: function() {
+		sq = 15;
 		this.container = $("#" + this.options.container);
 		if (!this.container || this.container.length == 0) return this.error("Container element " + this.options.container + " does not exist");
 		this.container.empty();
-		this.box = $("<div class='mazeBox'></div>").width(this.options.width*this.options.sq).height(this.options.height*this.options.sq).appendTo(this.container);
+		this.box = $("<div class='mazeBox'></div>").width(this.options.width*sq).height(this.options.height*sq).appendTo(this.container);
 		for (var i = 0; i < this.options.height; i++)
 			for (var j = 0; j < this.options.width; j++)
 				if (this.data[i][j])
-					$("<div class='sq'></div>").css({left:j*this.options.sq+"px",top:i*this.options.sq+"px",width:this.options.sq+"px",height:this.options.sq+"px"}).appendTo(this.box);
+					$("<div class='sq'></div>").css({left:j*sq+"px",top:i*sq+"px",width:sq+"px",height:sq+"px"}).appendTo(this.box);
 	},
 	renderText: function() {
 		this.container = $("#" + this.options.container);
@@ -75,6 +76,12 @@ MAZE_GENERATOR.prototype = {
 			str += "<br>";
 		}
 		this.box.append(str);
+	},
+	render: function() {
+		if (this.options.drawType == "div")
+			this.renderDiv();
+		else if (this.options.drawType == "text")
+			this.renderText();
 	},
 	error: function(message) {
 		alert(message);

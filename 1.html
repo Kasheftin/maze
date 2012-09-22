@@ -12,11 +12,11 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="/lib/bootstrap/css/bootstrap-responsitive.min.css" rel="stylesheet" />
+	<link href="/lib/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/lib/bootstrap/bootstrap/css/bootstrap-responsitive.min.css" rel="stylesheet" />
 	<link href="/css/maze.css" rel="stylesheet">
 
-	<script type="text/javascript" src="/lib/jquery/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/maze_generator.js"></script>
 	<script type="text/javascript" src="/js/core.js"></script>
 </head>
@@ -26,7 +26,8 @@
 			<form class="form-inline">
 				<label>Width: <input type="number" name="width" class="input-small" value="60"></label>
 				<label>Height: <input type="number" name="height" class="input-small" value="30"></label>
-				<label>Sq Size: <input type="text" name="sqSize" class="input-small" value="15px"></label>
+				<label class="radio"><input type="radio" name="drawType" value="div" checked="checked"> Draw by DIV-s</label>
+				<label class="radio"><input type="radio" name="drawType" value="text"> Draw by TEXT</label>
 				<label class="checkbox"><input type="checkbox" name="solidWalls" value="1" checked="checked"> Solid Walls</label>
 				<button id="mazeControlsSubmit" class="btn">Generate</button>
 			</form>
