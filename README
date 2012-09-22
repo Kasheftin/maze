@@ -1,1 +1,3 @@
 Super Simple Maze Generator (Javascript) 
+Working example is here: http://maze.ragneta.com
+It's just one recursive function that chooses random direction + 2 display functions (using square DIV-s and plain text).
