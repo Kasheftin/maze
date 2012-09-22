@@ -1,0 +1,39 @@
+
+body {
+	background-color: #121211;
+}
+
+.well {
+	margin-top: 20px;
+}
+
+form {
+	margin: 0;
+}
+
+.mazeBox {
+	position: relative;
+	border: 1px solid #3b3b3b;
+	background-color: #3b3b3b;
+	margin: 0 auto;
+}
+
+.mazeBox .sq {
+	position: absolute;
+	background-color: #ffffff;
+	width: 5px;
+	height: 5px;
+	top: 0;
+	left: 0;
+	font-size: 1;
+}
+
+.mazeTextBox {
+	font-family: monospace;
+	font-size: 14px;
+	line-height: 8px;
+	color: #ffffff;
+	background-color: #3b3b3b;
+	border: 1px solid #3b3b3b;
+	padding: 5px;
+}
